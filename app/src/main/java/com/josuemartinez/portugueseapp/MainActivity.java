@@ -16,29 +16,47 @@ public class MainActivity extends AppCompatActivity {
 
         //Find the View that shows the numbers category
         TextView numbers = (TextView) findViewById(R.id.numbers);
-
         //Set the clicklistener on that View
         numbers.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent numbersIntent = new Intent(MainActivity.this, MainActivity.class);
+                Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
                 //Start new activity
                 startActivity(numbersIntent);
             }
         });
-    }
 
 
-    public void openPhrasesList(View view){
-        Intent i = new Intent(this, PhrasesActivity.class);
-        startActivity(i);
+        TextView family = (TextView)findViewById(R.id.family);
+        family.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent familyIntent = new Intent(MainActivity.this, FamilyActivity.class);
+                startActivity(familyIntent);
+            }
+        });
+
+
+        TextView colors = (TextView)findViewById(R.id.colors);
+        colors.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent colorsIntent = new Intent(MainActivity.this, ColorsActivity.class);
+                startActivity(colorsIntent);
+            }
+        });
+
+
+        TextView phrases = (TextView)findViewById(R.id.phrases);
+        phrases.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent phrasesIntent = new Intent(MainActivity.this, PhrasesActivity.class);
+                startActivity(phrasesIntent);
+            }
+        });
+
+
     }
-    public void openFamilyList(View view){
-        Intent i = new Intent(this, FamilyActivity.class);
-        startActivity(i);
-    }
-    public void openColorsList(View view){
-        Intent i = new Intent(this, ColorsActivity.class);
-        startActivity(i);
-    }
+
 }
