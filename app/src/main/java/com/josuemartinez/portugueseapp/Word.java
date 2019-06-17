@@ -6,9 +6,19 @@ public class Word {
 
     private String mPortugueseTranslation;
 
+    private int mImageResourceID = NO_IMAGE_PROVIDED;
+
+    private static final int NO_IMAGE_PROVIDED = -1;
+
     public Word(String defaultTranslation, String portugueseTranslation){
         mDefaultTranslation = defaultTranslation;
         mPortugueseTranslation = portugueseTranslation;
+    }
+
+    public Word(String defaultTranslation, String portugueseTranslation, int imageResourceID){
+        mDefaultTranslation = defaultTranslation;
+        mPortugueseTranslation = portugueseTranslation;
+        mImageResourceID = imageResourceID;
     }
 
     //Get the default translation of the method
@@ -21,4 +31,11 @@ public class Word {
         return mPortugueseTranslation;
     }
 
+    public int getmImageResourceID() {
+        return mImageResourceID;
+    }
+
+    public boolean hasImage(){
+        return mImageResourceID != NO_IMAGE_PROVIDED;
+    }
 }
