@@ -32,8 +32,8 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
         Word currentWord = getItem(position);
 
-        TextView portugueseTextView = (TextView) listItemView.findViewById(R.id.portuguese_text_view);
-        portugueseTextView.setText(currentWord.getPortugueseTranslation());
+        TextView newTextView = (TextView) listItemView.findViewById(R.id.new_text_view);
+        newTextView.setText(currentWord.getNewTranslation());
 
         TextView defaultTextView = (TextView) listItemView.findViewById(R.id.default_text_view);
         defaultTextView.setText(currentWord.getDefaultTranslation());
