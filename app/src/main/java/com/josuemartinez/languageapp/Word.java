@@ -1,4 +1,4 @@
-package com.josuemartinez.portugueseapp;
+package com.josuemartinez.languageapp;
 
 public class Word {
 
